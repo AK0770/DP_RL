@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Report: The Dynamic Pricing AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #1a1a2e;
+            --surface-dark: #16213e;
+            --primary-accent: #0f3460;
+            --secondary-accent: #e94560;
+            --text-light: #e0e0e0;
+            --text-medium: #a7a9be;
+            --highlight-gold: #f9c536;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--primary-accent), var(--bg-dark));
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5em;
+            color: #ffffff;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header p {
+            font-size: 1.3em;
+            color: var(--text-medium);
+            margin-top: 1rem;
+        }
+        nav {
+            background-color: var(--surface-dark);
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            border: 1px solid var(--border-color);
+            width: fit-content;
+            margin: 0 auto 2rem auto;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--highlight-gold);
+            transform: translateY(-2px);
+        }
+        .section {
+            background-color: var(--surface-dark);
+            padding: 3rem;
+            margin-top: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 0;
+            border-bottom: 3px solid var(--secondary-accent);
+            padding-bottom: 0.8rem;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: var(--primary-accent);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--highlight-gold);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--highlight-gold);
+            font-size: 1.4em;
+        }
+        .card p {
+            color: var(--text-medium);
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            font-size: 1em;
+            color: var(--text-medium);
+        }
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+        .results-table th, .results-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+        .results-table th {
+            background-color: var(--primary-accent);
+            color: var(--highlight-gold);
+        }
+        .results-table tr:nth-child(even) {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Project Report: The Dynamic Pricing AI</h1>
+            <p>Training a digital brain to master the art of profitability.</p>
+        </header>
+
+        <nav>
+            <a href="#problem">The Mission</a>
+            <a href="#solution">The Game Plan</a>
+            <a href="#architecture">The Tech Stack</a>
+            <a href="#results">The Scoreboard</a>
+        </nav>
+
+        <section class="section" id="problem">
+            <h2>🎯 The Mission: End the Guessing Game</h2>
+            <p>
+                Setting the right price is tough. Too high, and your products sit on the shelf. Too low, and you're leaving money on the table. For decades, businesses have relied on static prices or simple rules, which is like navigating a maze blindfolded.
+            </p>
+            <p>
+                Our mission was to build an AI that could see the maze from above. We wanted an intelligent agent that could dynamically adjust prices based on real-time market signals—like inventory levels and customer demand—to maximize profit, not just sales.
+            </p>
+        </section>
+
+        <section class="section" id="solution">
+            <h2>🧠 The Game Plan: Teach an AI to Win</h2>
+            <p>
+                We turned this business problem into a game. The AI's goal? To get the highest score possible. The score, in this case, was the **total profit after a 30-day sales period**.
+            </p>
+            <p>
+                This approach, called **Reinforcement Learning**, is powerful because the AI learns from experience. We didn't give it any rules or hints. We just let it play the "pricing game" over and over, rewarding it only for the final profit. This forced it to discover complex, long-term strategies that a human might never find. It learned that sometimes, a patient, high-price strategy is far more profitable than selling out on day one.
+            </p>
+        </section>
+
+        <section class="section" id="architecture">
+            <h2>🛠️ The Tech Stack: From Simulation to Solution</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>The Arena (pricing_env.py)</h3>
+                    <p>A custom Python simulation that acts as the training ground. It's a mini-universe with its own economy, customers, and inventory system where our AI could practice without any real-world risk.</p>
+                </div>
+                <div class="card">
+                    <h3>The Champion (The PPO Model)</h3>
+                    <p>The "brain" of our operation is the <strong>Proximal Policy Optimization (PPO)</strong> algorithm. Implemented using the robust <strong>Stable-Baselines3</strong> library, this is the state-of-the-art technology that powers our agent's decision-making.</p>
+                </div>
+                <div class="card">
+                    <h3>The Training Montage (train_model.py)</h3>
+                    <p>This is where the magic happens. We subjected our AI to an intense training regimen of <strong>500,000 simulations</strong>. With each round, it got a little smarter, refining its strategy until it became a master of pricing. The final, elite model was saved as <code>best_model.zip</code>.</p>
+                </div>
+                <div class="card">
+                    <h3>The Mission Control (The Dashboard)</h3>
+                    <p>The <strong>FastAPI</strong> backend and <strong>Streamlit</strong> frontend work together to create an interactive dashboard. This is the bridge between the AI's complex brain and the user, providing instant, intelligent pricing recommendations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="results">
+            <h2>🏆 The Scoreboard: How Our AI Performed</h2>
+            <p>
+                After its rigorous training, it was time for the final test. We pitted our AI agent against several traditional pricing strategies in a series of head-to-head simulations. The results speak for themselves.
+            </p>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Average Profit</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>PPO Agent (Our AI)</strong></td>
+                        <td><strong>Excellent</strong></td>
+                        <td>Adapts to market changes, maximizing long-term profit.</td>
+                    </tr>
+                    <tr>
+                        <td>Fixed Price ($30)</td>
+                        <td>Good</td>
+                        <td>A decent baseline, but inflexible. Loses potential revenue.</td>
+                    </tr>
+                    <tr>
+                        <td>Rule-Based</td>
+                        <td>Fair</td>
+                        <td>Better than fixed, but too simplistic to handle complex scenarios.</td>
+                    </tr>
+                    <tr>
+                        <td>Random Pricing</td>
+                        <td>Poor</td>
+                        <td>Chaotic and unprofitable, demonstrating the need for an intelligent strategy.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 1.5rem;">
+                <strong>The Verdict:</strong> The PPO agent was the undisputed champion. By learning a truly dynamic strategy, it consistently outperformed all other methods, proving that an intelligent, adaptive approach is the key to maximizing profitability in a fluctuating market.
+            </p>
+        </section>
+
+        <footer class="footer">
+            <p>Project by [Your Name/Team Name] | August 2025</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
